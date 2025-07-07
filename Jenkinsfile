@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'git@github.com:mandrantofit/TPJenkins.git'
+                git 'https://github.com/mandrantofit/TPJenkins'
             }
         }
 
