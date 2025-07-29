@@ -2,8 +2,18 @@ import express from 'express';
 
 const app = express();
 
+app.use(express.json()); // Pour parser JSON dans le body
+
 app.get('/', (req, res) => {
   res.send('Hello Jenkins CI/CD!');
+});
+
+app.post('/number', (req, res) => {
+  const { value } = req.body;
+  if (typeof value !== 'number') {
+    return res.status(400).json({ error: 'Value must be a number' });
+  }
+  res.json({ message: `Received number: ${value}` });
 });
 
 export default app;
