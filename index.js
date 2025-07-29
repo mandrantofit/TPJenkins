@@ -1,12 +1,13 @@
 // index.js
-const express = require('express');
+import express from 'express';
+
 const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => res.send('Hello Jenkins CI/CD!'));
 
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   app.listen(port, () => console.log(`App listening at http://localhost:${port}`));
 }
 
-module.exports = app; // <--- export pour les tests
+export default app;
