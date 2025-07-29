@@ -1,13 +1,13 @@
-// index.js
 import express from 'express';
 
 const app = express();
-const port = 3000;
 
-app.get('/', (req, res) => res.send('Hello Jenkins CI/CD!'));
-
-if (import.meta.url === `file://${process.argv[1]}`) {
-  app.listen(port, () => console.log(`App listening at http://localhost:${port}`));
-}
+app.get('/', (req, res) => {
+  res.send('Hello Jenkins CI/CD!');
+});
 
 export default app;
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  app.listen(3000, () => console.log('Server started on port 3000'));
+}

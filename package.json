@@ -5,9 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "node index.js",
-  "test": "mocha"
-},
+    "start": "node index.js",
+    "test": "mocha"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,8 +15,8 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
-    "chai": "^5.2.1",
-    "chai-http": "^4.3.x",
-    "mocha": "^11.7.1"
+    "chai": "^4.3.7",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.0.0"
   }
 }
